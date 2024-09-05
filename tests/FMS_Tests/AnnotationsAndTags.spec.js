@@ -17,7 +17,7 @@ test.skip ('FMS Login', async ({page})=>{
 
 
 
-    test.only('RTUlogin110',async({page})=>{
+    test.skip('RTUlogin110',async({page})=>{
 
         await page.goto("http://10.144.228.110:8089/")
         await page.pause();

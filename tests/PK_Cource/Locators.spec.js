@@ -17,7 +17,7 @@ const {test,expect}=require('@playwright/test')
     
 })
 
-test.only('ValidLogin',async({page})=>{
+test('ValidLogin',async({page})=>{
 
     await page.goto('https://endtoend.fms.exfonova.com/');
     await expect(page).toHaveTitle('Sign in to EXFO RFTM')

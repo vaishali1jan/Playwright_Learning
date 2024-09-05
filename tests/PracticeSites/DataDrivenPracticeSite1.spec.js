@@ -7,7 +7,7 @@ const datafile= JSON.parse(JSON.stringify(require("../../Database/mydata.json"))
 describe("DDTTests",()=>{
 
 
-    test.beforeEach("Navigate",async({page})=>{
+    test.beforeEach("Navigate @smoke",async({page})=>{
 
         const GotoURl= new practicepage(page);
         await GotoURl.Navigate();
@@ -15,12 +15,12 @@ describe("DDTTests",()=>{
 
     })
 
-    test("TotalOptions",async({page})=>{
+    test("TotalOptions @smoke",async({page})=>{
 
         await expect(page.locator("//div[@class='col-md-3 mb-2']")).toHaveCount(85)
 
     })
-    test("Login",async({page})=>{
+    test("Login @smoke",async({page})=>{
         const GotoURl= new practicepage(page);
         await GotoURl.GotoOption("Test Login Page")
         await expect(page).toHaveTitle("Test Login Page for Automation Testing Practice")
@@ -29,7 +29,7 @@ describe("DDTTests",()=>{
 
     })
 
-    test("InvalidLogin",async({page})=>{
+    test("InvalidLogin@Reg",async({page})=>{
         
         const GotoURl= new practicepage(page);
         await GotoURl.GotoOption("Test Login Page")
