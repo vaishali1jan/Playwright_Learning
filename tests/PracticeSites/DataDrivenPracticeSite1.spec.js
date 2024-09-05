@@ -1,6 +1,7 @@
 const { describe, beforeEach } = require("node:test");
 const { practicepage } = require("../pages/practiceSite");
 import{test, expect} from '@playwright/test'
+import exp from 'constants';
 const datafile= JSON.parse(JSON.stringify(require("../../Database/mydata.json")))
 
 describe("DDTTests",()=>{
@@ -10,6 +11,7 @@ describe("DDTTests",()=>{
 
         const GotoURl= new practicepage(page);
         await GotoURl.Navigate();
+        await expect(page).toHaveTitle("Practice Test Automation WebSite")
 
     })
 
@@ -21,6 +23,7 @@ describe("DDTTests",()=>{
     test("Login",async({page})=>{
         const GotoURl= new practicepage(page);
         await GotoURl.GotoOption("Test Login Page")
+        await expect(page).toHaveTitle("Test Login Page for Automation Testing Practice")
         await GotoURl.Login(datafile.username,datafile.password)
         await expect(page.locator("#flash")).toHaveText("You logged into a secure area!")
 
