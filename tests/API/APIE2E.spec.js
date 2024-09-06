@@ -4,7 +4,7 @@ import { describe } from 'node:test'
 describe("API Requests", () => {
 
 
-    test.skip("SampleGet", async ({ request }) => {
+    test("SampleGet", async ({ request }) => {
         const res = await request.get("https://jsonplaceholder.cypress.io/comments")
         expect(res.status()).toBe(200)
         expect(res.statusText()).toBe("OK")
@@ -15,7 +15,7 @@ describe("API Requests", () => {
         console.log(email)
     })
 
-    test.skip("SamplePost", async ({ request }) => {
+    test("SamplePost", async ({ request }) => {
         const res1 = await request.post("https://jsonplaceholder.cypress.io/comments", {
             body: {
                 name: "Vaishali",
@@ -33,7 +33,7 @@ describe("API Requests", () => {
     })
 
 
-    test.skip("POST_Token", async ({ request }) => {
+    test("POST_Token", async ({ request }) => {
         let payload = {
             "client_id": "fg-topologyapi",
             "username": "user",
@@ -58,7 +58,7 @@ describe("API Requests", () => {
     })
 
     let SiteID;
-    test.only("POSTSite", async ({ request }) => {
+    test("POSTSite", async ({ request }) => {
         let payload = {
             name: "VPMSite2",
             description: "End"
