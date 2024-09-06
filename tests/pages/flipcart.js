@@ -17,7 +17,7 @@ exports.FMenus = class FMenus{
         await this.page.locator(this.mobile).click();
     }
 
-    async GotoFationPage(){
+    async GotoFashionPage(){
         await  this.page.locator(this.fashion).click();
     }
 
