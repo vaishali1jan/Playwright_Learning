@@ -6,9 +6,11 @@
   let test = "ABCDdsfsdf@@@@@##$$";
   console.log(test)
   let newtest = test.replace(/[^a-zA-Z0-9]/g, "")
+  let newtest1 = test.replace(/[a-z]/g, "[A-Z]")
+  console.log(newtest1)
   console.log(newtest)
 }
-//ReplaceSpecialCharactersinString ();
+ReplaceSpecialCharactersinString ();
 
 
 function FindCharOccurance()
@@ -25,7 +27,7 @@ function FindCharOccurance()
   }
   console.log(Charcount)
 }
-FindCharOccurance()
+//FindCharOccurance()
 
 
 

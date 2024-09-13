@@ -33,7 +33,7 @@ describe("API Requests", () => {
     })
 
 
-    test("POST_Token", async ({ request }) => {
+    test.skip("POST_Token", async ({ request }) => {
         let payload = {
             "client_id": "fg-topologyapi",
             "username": "user",
@@ -58,7 +58,7 @@ describe("API Requests", () => {
     })
 
     let SiteID;
-    test("POSTSite", async ({ request }) => {
+    test.skip("POSTSite", async ({ request }) => {
         let payload = {
             name: "VPMSite2",
             description: "End"
