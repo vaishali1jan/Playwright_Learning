@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test":"npx playwright test --config=playwright.config1.js  --grep 'UC_API_POM'"
+    "APITests": "npx playwright test APIE2E --headed --project=chromium",
+    "UIsmoke": "npx playwright test --grep  \"@smoke\" --headed --project=chromium",
+    "test":"npx playwright test --config=playwright.config1.js  --grep 'UC_loginCoo'"
   },
   "keywords": [],
   "author": "",

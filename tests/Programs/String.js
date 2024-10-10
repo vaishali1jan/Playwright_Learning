@@ -10,7 +10,7 @@
   console.log(newtest1)
   console.log(newtest)
 }
-ReplaceSpecialCharactersinString ();
+//ReplaceSpecialCharactersinString ();
 
 
 function FindCharOccurance()
@@ -27,7 +27,21 @@ function FindCharOccurance()
   }
   console.log(Charcount)
 }
-//FindCharOccurance()
+
+
+function ReverseStringSequence()
+{
+  let stringOrg = "I am working on my skills of automation"
+  let string =stringOrg.split("")
+  let RevString1=""
+  for (i=string.length-1;i<=0;i--)
+  {
+      RevString1=RevString1+ string[i]
+    }
+  
+  console.log(RevString1)
+}
+ReverseStringSequence()
 
 
 
